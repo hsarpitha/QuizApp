@@ -1,3 +1,39 @@
+.frontPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+  color: #333;
+  text-align: center;
+}
+
+.frontPage h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.frontPage p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.frontPage button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: #007BFF;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.frontPage button:hover {
+  background: #0056b3;
+}
+
 body{
     background-color:#B692C2;
     margin: 0px;padding: 0px;

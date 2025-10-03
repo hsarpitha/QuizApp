@@ -7,6 +7,7 @@ export default function Quizapp() {
     const [option, setOption] = useState('');
     const [score, setScore] = useState(0);
     const [finished, setFinish] = useState(false);
+    const [start, setStart] = useState(false); // 🔹 New state for front page
     const correctAnswers = ['Option1','Option1','Option1','Option1','Option1',
         'Option1','Option1','Option1','Option1','Option1']
 
@@ -25,11 +26,22 @@ export default function Quizapp() {
             setFinish(true);
         }
     }
+    if (!start) {
+        return (
+            <div className="frontPage">
+                <h1>Welcome to Online Quiz App</h1>
+                <p>Test your knowledge and see your score at the end!</p>
+                <button onClick={() => setStart(true)}>Start Quiz</button>
+            </div>
+        )
+    }
+
     if(finished) {
         return (
             <div className="scorePage">
             <h1>Quiz Finished</h1>
             <h3> Your Score is {score} out of {data.length}</h3>
+            <h2>Congratulations</h2>
             </div>
         )
     }
